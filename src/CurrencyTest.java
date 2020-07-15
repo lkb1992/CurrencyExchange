@@ -86,7 +86,7 @@ public class CurrencyTest {
         for (Map.Entry<String, BigDecimal> entry: map.entrySet()) {
            if(!USD.equals(entry.getKey())){
                BigDecimal usdAmount = new BigDecimal(String.valueOf(entry.getValue())).divide(new BigDecimal(CURRENCY_EXCHANGE_RATE.get(entry.getKey())), 2,BigDecimal.ROUND_HALF_UP);
-               SHOW_OUTPUTS.put(entry.getKey().toString(),entry.getValue()+"("+usdAmount+")");
+               SHOW_OUTPUTS.put(entry.getKey().toString(),entry.getValue()+"(USD "+usdAmount+")");
            }else{
                SHOW_OUTPUTS.put(entry.getKey().toString(),entry.getValue().toString());
            }
