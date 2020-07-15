@@ -1,1 +1,0 @@
-you need to add the file payment.txt into path "D:/"
